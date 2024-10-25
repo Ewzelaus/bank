@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Main.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">fun </span><span class="s1">main</span><span class="s2">() {</span>
+    <span class="s0">val </span><span class="s1">bankSystem </span><span class="s2">= </span><span class="s1">BankSystem</span><span class="s2">()</span>
+
+
+    <span class="s0">val </span><span class="s1">bank </span><span class="s2">= </span><span class="s1">Bank</span><span class="s2">(</span><span class="s3">&quot;Сбербанк&quot;</span><span class="s2">, </span><span class="s3">&quot;Сбер&quot;</span><span class="s2">, </span><span class="s4">1.5</span><span class="s2">)</span>
+    <span class="s1">bankSystem</span><span class="s2">.</span><span class="s1">addBank</span><span class="s2">(</span><span class="s1">bank</span><span class="s2">)</span>
+
+
+    <span class="s0">val </span><span class="s1">individual </span><span class="s2">= </span><span class="s1">Individual</span><span class="s2">(</span><span class="s3">&quot;Иванов Иван Иванович&quot;</span><span class="s2">, </span><span class="s3">&quot;1234567890&quot;</span><span class="s2">, </span><span class="s3">&quot;1234&quot;</span><span class="s2">, </span><span class="s3">&quot;567890&quot;</span><span class="s2">)</span>
+    <span class="s1">bankSystem</span><span class="s2">.</span><span class="s1">addIndividual</span><span class="s2">(</span><span class="s1">individual</span><span class="s2">)</span>
+
+
+    <span class="s0">val </span><span class="s1">currentAccount </span><span class="s2">= </span><span class="s1">CurrentAccount</span><span class="s2">(</span><span class="s1">bank</span><span class="s2">, </span><span class="s4">1000.0</span><span class="s2">, </span><span class="s3">&quot;RU123456789&quot;</span><span class="s2">)</span>
+    <span class="s1">individual</span><span class="s2">.</span><span class="s1">currentAccounts</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">currentAccount</span><span class="s2">)</span>
+
+
+    <span class="s1">currentAccount</span><span class="s2">.</span><span class="s1">deposit</span><span class="s2">(</span><span class="s4">500.0</span><span class="s2">)</span>
+    <span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Баланс текущего счета: </span><span class="s0">${</span><span class="s1">currentAccount</span><span class="s2">.</span><span class="s1">balance</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+
+    <span class="s1">currentAccount</span><span class="s2">.</span><span class="s1">withdraw</span><span class="s2">(</span><span class="s4">200.0</span><span class="s2">)</span>
+    <span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Баланс текущего счета после снятия: </span><span class="s0">${</span><span class="s1">currentAccount</span><span class="s2">.</span><span class="s1">balance</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+
+
+<span class="s2">}</span></pre>
+</body>
+</html>

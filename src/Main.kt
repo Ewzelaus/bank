@@ -18,7 +18,7 @@ fun main() {
     println("Баланс текущего счета: ${currentAccount.balance}")
 
     currentAccount.withdraw(200.0)
-    println("Баланс текущего счета после снятия: ${currentAccount.balance}")
+    println("Баланс текущего счета после снятия: ${currentAccount.balance}") //iujiudsacsdiucv
 
 
 }
